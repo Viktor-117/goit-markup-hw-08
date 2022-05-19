@@ -1,6 +1,5 @@
 .portfolio-item {
     max-width: 100%;
-    // margin-right: 30px;
     margin-bottom: 30px;
     transition: box-shadow 250ms var(--transition-timing);
     cursor: pointer;
@@ -18,15 +17,15 @@
         width: calc(100% / 2 - 30px);
     }
     @include desktop {
-        margin-right: 30px;
         width: calc(100% / 3 - 30px);
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+         &:nth-last-child(-n + 3) {
+            margin-bottom: 0;
+        }
     }
-//     &:nth-child(3n) {
-//         margin-right: 0;
-//     }
-//     &:nth-last-child(-n + 3) {
-//         margin-bottom: 0;
-//     }
+   
     &:hover .portfolio-thumb-text {
         transform: translate(0);
     }
@@ -44,7 +43,6 @@
     .portfolio-list {
         display: flex;
         flex-wrap: wrap;
-        margin-right: -30px;
     }
 }
 
@@ -98,7 +96,7 @@
     background-color: rgba(33, 150, 243, 0.9);
     padding: 0 24px;
     transition: transform 250ms var(--transition-timing);
-    @media screen and (min-width: 320px) and (max-width: 479px) {
-        font-size: 16px;
+    @media screen and (min-width: 320px) and (max-width: 370px) {
+        font-size: 15px;
     }
 }
