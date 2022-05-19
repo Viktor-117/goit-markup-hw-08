@@ -3,13 +3,20 @@
     padding: 60px 0;
     .container {
         display: flex;
+        flex-direction: column;
     }
+}
+
+.address {
+    text-align: center;
 }
 
 .footer__logo {
     color: var(--white-bg-color);
     display: inline-block;
     margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.17;
 }
 
 .footer-address {
@@ -19,7 +26,7 @@
     line-height: 1.7;
     letter-spacing: 0.03em;
     margin-top: 0;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .footer-item {
@@ -36,8 +43,8 @@
 }
 
 .join {
-    margin-left: 70px;
-    margin-top: 12px;
+    text-align: center;
+    margin-top: 60px;
 }
 
 .join-title {
@@ -79,10 +86,6 @@
 
 .send-thumb {
     display: flex;
-}
-
-.join {
-    margin-left: auto;
 }
 
 .join-email {

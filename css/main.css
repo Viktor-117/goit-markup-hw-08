@@ -292,9 +292,116 @@ img {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header .container {
+.header > .container {
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .header > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.menu-open-icon, .menu-close-icon {
+  transition: fill 250ms var(--transition-timing);
+}
+.menu-open-icon:hover, .menu-close-icon:hover {
+  fill: var(--accent-color);
+}
+
+.menu-open-btn, .menu-close-btn {
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+    width: 0;
+    margin-left: 0;
+  }
+}
+
+.menu-close-btn {
+  padding: 0;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  background-color: var(--white-bg-color);
+  height: 100vh;
+  width: 100vw;
+}
+.mob-menu .container {
+  padding-top: 10px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mob-menu__item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-menu__item .link {
+  color: var(--primary-text-color);
+}
+.mob-menu__item .current {
+  color: var(--accent-color);
+}
+
+.mob-connect__item .phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.mob-connect__item .mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+.mob-connect__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-soc-list {
+  display: flex;
+  margin-top: 64px;
+}
+
+.mob-soc-list-item:not(:first-child) {
+  padding-left: 10px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mob-soc-list-item:not(:last-child) {
+  padding-right: 10px;
+}
+.mob-soc-list-item .mob-soc-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .navigation .link {
@@ -305,8 +412,18 @@ img {
 }
 
 .navigation__list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-left: 93px;
+  }
 }
 
 .navigation__item {
@@ -322,17 +439,28 @@ img {
 }
 
 .connect__list {
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .connect__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  .connect__list .link {
+    display: block;
+  }
+}
+
+.connect__item {
   font-weight: var(--primary-font-weight);
   font-size: var(--primary-font-size);
   line-height: 1.15;
   color: var(--secondary-text-color);
   letter-spacing: 0.02em;
 }
-
-.connect__item + .connect__item {
-  margin-left: 50px;
+.connect__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 .connect__item .link.phone, .connect__item .link.mail {
   display: flex;
@@ -340,8 +468,6 @@ img {
 }
 .connect__item .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .connect__icon {
@@ -773,12 +899,19 @@ img {
 }
 .footer .container {
   display: flex;
+  flex-direction: column;
+}
+
+.address {
+  text-align: center;
 }
 
 .footer__logo {
   color: var(--white-bg-color);
   display: inline-block;
   margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .footer-address {
@@ -788,7 +921,7 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .footer-item .link {
@@ -803,8 +936,8 @@ img {
 }
 
 .join {
-  margin-left: 70px;
-  margin-top: 12px;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .join-title {
@@ -843,10 +976,6 @@ img {
 
 .send-thumb {
   display: flex;
-}
-
-.join {
-  margin-left: auto;
 }
 
 .join-email {
