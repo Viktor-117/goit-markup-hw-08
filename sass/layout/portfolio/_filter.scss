@@ -9,6 +9,7 @@
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 22px;
+    margin-bottom: 15px;
     transition: box-shadow 250ms var(--transition-timing), background-color 250ms var(--transition-timing), color 250ms var(--transition-timing);
     &:hover,
     &:focus {
