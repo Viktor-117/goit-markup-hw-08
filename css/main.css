@@ -71,7 +71,6 @@ img {
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  outline: tomato solid 2px;
 }
 @media screen and (min-width: 480px) {
   .container {
