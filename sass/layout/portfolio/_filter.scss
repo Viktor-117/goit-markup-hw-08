@@ -9,7 +9,7 @@
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 22px;
-    margin-bottom: 15px;
+    
     transition: box-shadow 250ms var(--transition-timing), background-color 250ms var(--transition-timing), color 250ms var(--transition-timing);
     &:hover,
     &:focus {
@@ -22,11 +22,19 @@
     }
 }
 
-.btn-item:not(:last-child) {
-    margin-right: 8px;
+.btn-item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    &:nth-child(-n+3) {
+        margin-bottom: 15px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 399px) {
+        &:nth-child(-n+4) {
+        margin-bottom: 15px;
+        }
+    }
 }
-
-
 
 .active-btn {
     background-color: var(--accent-color);

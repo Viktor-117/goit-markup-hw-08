@@ -19,8 +19,6 @@
   }
 }
 
-
-
 .menu-open-btn, .menu-close-btn {
   background-color: transparent;
   border: none;
@@ -150,12 +148,12 @@
 .connect__list {
   display: none;
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin-left: auto;
-    .link {
-      display: block;
-    }
+  }
+  @include desktop {
+    display: flex;
+    margin-left: auto;
   }
 }
 
@@ -168,18 +166,20 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
-  // &+ & {
-  // margin-left: 50px;
-  // }
-  & .link.phone,
-  & .link.mail {
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &+& {
+      margin-left: 30px;
+    }
+  }
+  .link.phone,
+  .link.mail {
     display: flex;
     align-items: center;
-  }
-  .link {
-    display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
   }
 }
 

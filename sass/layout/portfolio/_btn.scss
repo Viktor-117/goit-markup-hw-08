@@ -3,7 +3,7 @@
     justify-content: left;
     margin-bottom: 40px;
     flex-wrap: wrap;
-        @include tablet {
+    @include tablet {
         justify-content: center;
         flex-wrap: nowrap;
     }

@@ -4,11 +4,30 @@
     .container {
         display: flex;
         flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+}
+
+.address-tab {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        justify-content: left;
+        flex-direction: row;
     }
 }
 
 .address {
     text-align: center;
+    @include desktop {
+        text-align: left;
+    }
 }
 
 .footer__logo {
@@ -17,6 +36,10 @@
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.17;
+    @include desktop {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 
 .footer-address {
@@ -45,6 +68,25 @@
 .join {
     text-align: center;
     margin-top: 60px;
+    @include tablet {
+        margin-top: 5px;
+        margin-left: 162px;
+    }
+    @include desktop {
+        margin-left: 70px;
+        text-align: left;
+        margin-top: 12px;
+    }
+}
+
+.join-form {
+    text-align: center;
+    margin-top: 60px;
+    @include desktop {
+        margin-top: 12px;
+        margin-left: 93px;
+        text-align: left;
+    }
 }
 
 .join-title {
@@ -86,10 +128,15 @@
 
 .send-thumb {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        flex-direction: row;
+    }
 }
 
 .join-email {
-    width: 358px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -104,6 +151,12 @@
         line-height: 1.25;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
+    }
+    @include tablet {
+        width: 450px;
+    }
+    @include desktop {
+        width: 358px;
     }
 }
 
@@ -124,7 +177,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 12px;
+    margin-top: 20px;
+    @include desktop {
+        margin-top: 0;
+        margin-left: 12px;
+    }
 }
 
 .send-icon {
