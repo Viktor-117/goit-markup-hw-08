@@ -1204,7 +1204,7 @@ img {
     margin-bottom: 0;
   }
   .portfolio-item:first-child .card {
-    height: 110px;
+    height: 112px;
   }
 }
 .portfolio-item:hover .portfolio-thumb-text {
