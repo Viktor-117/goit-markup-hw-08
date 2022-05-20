@@ -1189,6 +1189,9 @@ img {
     margin-right: 30px;
     width: calc(50% - 30px);
   }
+  .portfolio-item:first-child .card {
+    height: 146px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-item {
