@@ -695,8 +695,14 @@ img {
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .about-list__title {
+    text-align: left;
+  }
 }
 
 .about-list__text {
@@ -768,13 +774,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
-    margin-bottom: -30px;
+    margin-top: -30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team-list {
     flex-wrap: nowrap;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -795,6 +802,7 @@ img {
   .team-item {
     width: calc(50% - 30px);
     margin-left: 30px;
+    margin-top: 0;
   }
 }
 
@@ -805,6 +813,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .team-title {
@@ -866,6 +875,13 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+    line-height: 1, 17;
+    margin-bottom: 50px;
+  }
+}
 
 .clients-list {
   display: flex;
@@ -886,6 +902,11 @@ img {
 @media screen and (min-width: 768px) {
   .clients-item {
     width: calc(33.3333333333% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    margin-top: 0;
   }
 }
 
@@ -1124,12 +1145,12 @@ img {
   .list.btn {
     justify-content: center;
     flex-wrap: nowrap;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .list.btn {
-    justify-content: center;
-    flex-wrap: nowrap;
+    margin-bottom: 50px;
   }
 }
 
@@ -1164,6 +1185,11 @@ img {
     margin-bottom: 15px;
   }
 }
+@media screen and (min-width: 768px) {
+  .btn-item:nth-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
 
 .active-btn {
   background-color: var(--accent-color);
@@ -1191,6 +1217,9 @@ img {
   }
   .portfolio-item:first-child .card {
     height: 146px;
+  }
+  .portfolio-item:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {

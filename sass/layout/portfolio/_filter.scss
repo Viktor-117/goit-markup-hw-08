@@ -34,6 +34,10 @@
         margin-bottom: 15px;
         }
     }
+    @include tablet {
+        &:nth-child(-n+3) {margin-bottom: 0;
+        }
+    }
 }
 
 .active-btn {

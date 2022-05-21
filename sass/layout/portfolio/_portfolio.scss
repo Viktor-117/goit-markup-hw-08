@@ -18,6 +18,9 @@
         &:first-child .card {
             height: 146px;
         }
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
     }
     @include desktop {
         width: calc(100% / 3 - 30px);

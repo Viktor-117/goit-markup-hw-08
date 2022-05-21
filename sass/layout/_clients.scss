@@ -4,6 +4,11 @@
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    @include desktop {
+        font-size: 36px;
+        line-height: 1,17;
+        margin-bottom: 50px;
+    }
 }
 
 .clients-list {
@@ -21,6 +26,9 @@
     width: calc((100% / 2) - 30px);
     @include tablet {
         width: calc((100% / 3) - 30px);
+    }
+    @include desktop {
+        margin-top: 0;
     }
 }
 
